@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(to top, green, rgba(0, 128, 0, 0.835), rgba(0, 128, 0, 0.698), rgba(0, 128, 0, 0.469));
+}
+
+.box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    column-gap: 20px;
+    flex-direction: column;
+}
+
+.box section {
+    display: flex;
+    justify-content: center;
+}
+
+.box div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 20px;
+    transition: 1s;
+
+}
+
+/*TIPOS DE GRADIENTES*/
+.box1 .caja1 {
+    background-image: linear-gradient(to left, green, blue, rgba(255, 0, 0, 0.717), orange);
+}
+.box1 .caja2 {
+    background-image: linear-gradient(to top, green, blue, red, orange); 
+}
+.box1 .caja3 {
+    background-image: radial-gradient(circle, blue, orange)
+}
+.box1 .caja4 {
+    background-image: radial-gradient(ellipse 30px 80px, blue, orange)
+}
+
+/*TRANSFORMACIONES: TRANSLATE*/
+.box2 .caja1:hover {
+    /*
+    transform:
+    primer valor= desplazamiento horizontal(ejeX) 
+    segundo valor= desplazamiento verical(ejeY)
+    valores negativos= izquierda/arriba
+    valores positivos= derecha/abajo
+    */
+
+    transform: translate(20px, 50px);
+    transition: 1s;
+}
+.box2 .caja2:hover {
+    transform: translate(-20px, -50px);
+    transition: 1s;
+}
+.box2 .caja3:hover {
+    transform: translateX(30px);
+    transition: 1s;
+}
+.box2 .caja4:hover {
+    transform: translateY(-50px);
+    transition: 1s;
+}
+
+/*TRANSFORMACIONES: ROTATE*/
+.box3 .caja1:hover {
+    /*
+    VALOR POSITIVO= ROTA HACIA LA DERECHA (SENTIDO HORARIO)
+    VALOR NEGATIO= ROTA HACIA LA IZQUIERDA (SENTIDO ANTIHORARIO)
+    */
+    transform: rotate(30deg);
+}
+.box3 .caja2:hover {
+    transform: rotate(-30deg);
+}
+
+
+/*TRANSFORMACIONES: SCALE*/
+.box4 .caja1:hover {
+    /*
+    PRIMER VALOR= ANCHO (X)
+    SEGUNDO VALOR= ALTA (Y)
+    VALOR POSITIVO= AGRANDA
+    VALOR NEGATIVO / - 0= ACHICAN
+    */
+    transform: scale(1.2, 1.5);
+}
+.box4 .caja2:hover {
+    transform: scaleX(1.5);
+}
+.box4 .caja3:hover {
+    transform: scaleY(2);
+}
+
+/*TRANFORM: SKEW / TORCER*/
+.box5 .caja1:hover {
+    /*
+    PRIMER VALOR= X
+    SEGUNDO VALOR= Y
+    */
+    transform: skew(20deg, 10deg);
+}
+.box5 .caja2:hover {
+    transform: skewX(20deg);
+}
+.box5 .caja3:hover {
+    transform: skewY(40deg);
+}
+
+@keyframes un_efecto {
+    0% {width: 20px;}
+    20% {width: 40px;}
+    40% {width: 60px;}
+    60% {width: 80px;}
+    80% {width: 100px;}
+    100% {width: 120px;}
+}
+
+.box6 .caja1 {
+    width: 20px;
+    height: 100px;
+    animation-name: un_efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 4s;
+
+}
