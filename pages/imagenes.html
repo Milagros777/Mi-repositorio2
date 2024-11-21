@@ -1,124 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!--LIBRERÍA FONT AWESOME/ICONS-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--LIBRERÍA FONT AWESOME/ICONS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        
-        <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="../css/style.css">
-        <title>Imágenes</title>
-    </head>
-    <body id="body">
-        <!--ESTRUCTURA°1 = HEADER/NAV-->
-        <header id="header">
-            <nav id="navBar">
-                <img src="../icons/logo.png" alt="">
-                <ul>
-                    <li><a href="../index.html">INICIO</a></li>
-                    <li><a href="contacto.html">CONTACTO</a></li>
-                    <li><a href="#">IMÁGENES</a></li>
-                    <li><a href="tienda.html">TIENDA</a></li>
-                    <li><a href="portfolio.html">PORTFOLIO</a></li>
-                </ul>
-            </nav>
-        </header>
+    <link rel="shortcut icon" href="icons/SVGLOGO.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Imágenes</title>
+</head>
+<body id="body">
+    <!--ESTRUCTURA°1 = HEADER/NAV-->
+    <header id="header">
+        <nav id="navBar">
+            <img src="../icons/logo_arte.png" alt="">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">Imágenes</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!--BANNER DEL SITIO-->
-        <section class="main__banner">
-            <picture class="main__banner-picture">
-                <img src="../icons/logo.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint corrupti eligendi eum magnam rem animi.</p>
-            </picture>
+    <!--BANNER DEL SITIO-->
+    <section class="main__banner">
+        <picture class="main__banner-picture">
+            <img src="../icons/logo_arte.png" alt="">
+            <p>In Arte</p>
+        </picture>
+    </section>
+    
+    <!--ESTRUCTURA°2 = MAIN-->    
+    <main id="main">
+        <h1>Imágenes</h1>
+
+        <section class="grid">
+            <!-- Primer tarjeta -->
+            <div class="card" style="width: 18rem;">
+                <img src="../images/page-imagenes/buho.jpg" class="card-img-top" alt="Búho en la naturaleza">
+                <div class="card-body">
+                </div>
+            </div>
+
+            <!-- Segunda tarjeta -->
+            <div class="card" style="width: 18rem;">
+                <img src="../images/page-imagenes/buho2.jpg" class="card-img-top" alt="Búho nocturno">
+                <div class="card-body">
+                </div>
+            </div>
+
+            <!-- Tercera tarjeta -->
+            <div class="card" style="width: 18rem;">
+                <img src="../images/page-imagenes/playa.jpg" class="card-img-top" alt="Playa al atardecer">
+                <div class="card-body">
+                </div>
+            </div>
+
+            <!-- Cuarta tarjeta -->
+            <div class="card" style="width: 18rem;">
+                <img src="../images/page-imagenes/arbol.jpg" class="card-img-top" alt="Árbol en el bosque">
+                <div class="card-body">
+                </div>
+            </div>
         </section>
         
-        <!--ESTRUCTURA°2 = MAIN-->    
-        <main id="main">
-            <h1>Imágenes</h1>
+    </main>
 
-            <section class="grid">
+    <!--ESTRUCTURA°3 = FOOTER-->
+    <footer id="footer">
+        <section class="footer__logo">
+            <picture class="footer__logo-picture">
+                <img class="footer__logo-pictureimg" src="../icons/logo_arte.png" alt="Logo arte">
+            </picture>
+        </section>
 
-                <article class="grid__card1 card">
-                    <article class="grid__card1--cont1">
-                        <picture>
-                            <button class="btn1">Botón 1</button>
-                            <button class="btn2">Botón 2</button>
-                        </picture>
-                        <h1>Card1</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, distinctio consectetur unde omnis debitis pariatur ad sunt delectus earum qui!</p>
-                    </article>
-                </article>
+        <section class="footer__links">
+            <ul class="footer__links-ul">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">Imágenes</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+            <article class="footer__links-copyright">
+                <h3>Copyright 2024</h3>
+                <h4>Creado por - Milagros Vásquez</h4>
+            </article>
+        </section>
 
-                <article class="grid__card2 card">
-                    <article class="grid__card2--cont1">
-                        <picture>
-                            <button class="btn1">Botón 1</button>
-                            <button class="btn2">Botón 2</button>
-                        </picture>
-                        <h1>Card1</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, distinctio consectetur unde omnis debitis pariatur ad sunt delectus earum qui!</p>
-                    </article>
+        <section class="footer__redes">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a> 
+        </section>
+    </footer>
         
-                </article>
-
-                <article class="grid__card1 card">
-                    <article class="grid__card3--cont1">
-                        <picture>
-                            <button class="btn1">Botón 1</button>
-                            <button class="btn2">Botón 2</button>
-                        </picture>
-                        <h1>Card1</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, distinctio consectetur unde omnis debitis pariatur ad sunt delectus earum qui!</p>
-                    </article>
-                </article>
-                
-                <article class="grid__card4 card">
-                    <article class="grid__card4--cont1">
-                        <picture>
-                            <button class="btn1">Botón 1</button>
-                            <button class="btn2">Botón 2</button>
-                        </picture>
-                        <h1>Card1</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, distinctio consectetur unde omnis debitis pariatur ad sunt delectus earum qui!</p>
-                    </article>
-                </article>
-            </section>
-            
-        </main>
-
-        <!--ESTRUCTURA°3 = FOOTER-->
-        <footer id="footer">
-            <section class="footer__logo">
-                <picture class="footer__logo-picture">
-                    <img class="footer__logo-pictureimg" src="../icons/logo.png" alt="">
-                </picture>
-            </section>
-
-            <section class="footer__links">
-
-                <ul class="footer__links-ul">
-                    <li><a href="../index.html">INICIO</a></li>
-                    <li><a href="contacto.html">CONTACTO</a></li>
-                    <li><a href="#">IMÁGENES</a></li>
-                    <li><a href="tienda.html">TIENDA</a></li>
-                    <li><a href="portfolio.html">PORTFOLIO</a></li>
-                </ul>
-                <article class="footer__links-copyright">
-                    <h3>Copyright 2024</h3>
-                    <h4>Creado por - Axel Henderson Bianchi</h4>
-                </article>
-            </section>
-
-            <section class="footer__redes">
-                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-youtube"></i></a> 
-            </section>
-        </footer>
-            
-    </body>
+</body>
 </html>
