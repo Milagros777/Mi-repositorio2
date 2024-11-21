@@ -1,9 +1,10 @@
 @charset "UTF-8";
+
 /*ESTILOS RESET CSS*/
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
   text-decoration: none;
   list-style: none;
   color: black;
@@ -22,8 +23,10 @@ li {
   display: flex;
   flex-direction: column;
   max-width: 1400px;
+  margin: 0 auto;
 }
 
+/*BODY GENERAL*/
 #main {
   margin-top: 10px;
   min-height: 100vh;
@@ -46,18 +49,15 @@ li {
   width: 80px;
 }
 
-/*ESTILOS CONTENIDO*/
-/*////////////////////////////////////////////////////*/
+/*BANNER DEL SITIO*/
 .main__banner {
   width: 100%;
   height: 50vh;
   margin-top: 80px;
   background-image: url(images/banner.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
-  aspect-ratio: 1/1;
+  background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   position: relative;
 }
 
@@ -65,7 +65,7 @@ li {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(128, 128, 128, 0.288);
+  background-color: rgba(128, 128, 128, 0.5);
   backdrop-filter: blur(2px);
   display: flex;
   justify-content: center;
@@ -75,15 +75,30 @@ li {
 
 .main__banner-picture p {
   text-align: center;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
 }
 
 .main__banner-picture img {
   width: 200px;
+  border-radius: 50%;
 }
 
 /*SECCIÓN INICIO 1*/
 .inicio__contenido1-h1, .inicio__contenido1-h2 {
   text-align: center;
+  font-size: 36px;
+  color: #333;
+}
+
+.inicio__contenido1-p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+  margin-top: 20px;
+  padding: 0 15px;
 }
 
 /*SECCIÓN INICIO 2*/
@@ -94,28 +109,65 @@ li {
 }
 
 .inicio__contenido2-iframe {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   height: 300px;
+  border: none;
+  margin-top: 20px;
+}
+
+/*FORMULARIO DE CONTACTO*/
+form {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+form input[type="submit"] {
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 12px 20px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #555;
 }
 
 /*ESTILOS FOOTER*/
 #footer {
   width: 100%;
-  height: auto;
-  margin-top: auto;
-  background-color: aqua;
+  background-color: #3c3f3f;
+  padding: 40px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  color: white;
 }
 
-/*FOOTER LOGO*/
 .footer__logo-pictureimg {
   width: 150px;
 }
 
-/*FOOTER LINKS*/
 .footer__links {
   display: flex;
   flex-direction: column;
@@ -129,6 +181,7 @@ li {
 
 .footer__links-ul li {
   display: block;
+  margin: 10px 0;
 }
 
 .footer__links-copyright h3 {
@@ -139,36 +192,47 @@ li {
   font-size: small;
 }
 
-/*FOOTER REDES*/
 .footer__redes .fa-brands {
   margin-left: 15px;
   font-size: 26px;
+  transition: color 0.3s ease;
 }
 
+.footer__redes .fa-brands:hover {
+  color: #1e90ff;
+}
+
+/*CARD GRID IMÁGENES*/
 .grid {
   width: 100%;
-  height: auto;
-  background-color: rgb(161, 205, 191);
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .card {
-    width: 400px;
+  width: 400px;
   height: auto;
-  border: 1px black dotted;
+  border: 1px dotted #333;
   display: flex;
   text-align: center;
   flex-direction: column;
   margin: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .grid picture {
   width: 100%;
   height: 250px;
-  background-image: url("images/page-imagenes/tigre.jpg");
+  background-image: url("images/page-imagenes/banner.JPG");
   background-size: cover;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -176,30 +240,27 @@ li {
   grid-template-areas: ". . ." ". . ." ". . ." "btn1 . btn2";
 }
 
-.btn1 {
-  grid-area: btn1;
-  border: none;
-  transition: 1s;
-}
-
-.btn2 {
-  grid-area: btn2;
-}
-
-.btn1:hover {
-  background-color: black;
+.btn1, .btn2 {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #333;
   color: white;
-  transition: 1s;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.card {
-  transition: 1s;
+.btn1:hover, .btn2:hover {
+  background-color: #555;
 }
 
-.card:hover {
-  margin-bottom: 20px;
-  margin-right: 10px;
-  box-shadow: 15px 10px rgba(0, 0, 0, 0.558);
-  transition: 1s;
+/*ANIMACIONES DEL HOVER EN LOS BOTONES DE LA CARD*/
+.card .btn1:hover {
+  background-color: #1e90ff;
+}
+
+.card .btn2:hover {
+  background-color: #ff6347;
 }
 
